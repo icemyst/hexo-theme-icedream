@@ -46,7 +46,7 @@
     },
     "type": "module",
     "devDependencies": {
-        "@babel/core": "^7.22.11",
+        "@babel/core": "^7.22.20",
         "@babel/preset-env": "^7.22.10",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
