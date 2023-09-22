@@ -1,0 +1,79 @@
+#album
+  //- .author-content.author-content-item.album.single(style=`background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25),url(https://images.wallpaperscraft.com/image/single/girl_twilight_clouds_156445_2560x1080.jpg) center calc(50% + 3%) / cover no-repeat;` : "")
+  .author-content.author-content-item.album.single(style = `background: url(https://pic1.zhimg.com/v2-c9d0005e538eeeab7b7e1599533428b8_r.jpg) left 28% / cover no-repeat !important;`)
+    .card-content
+      .author-content-item-tips 藏宝阁
+      span.author-content-item-title 那些我的收藏和记录
+      .content-bottom
+        .tips 一个收藏页面，收集了各种杂七杂八。
+      .banner-button-group
+        a.banner-button(onclick='pjax.loadUrl("/about/")')
+          i.fas.fa-arrow-circle-right(style='font-size: 1rem')
+          span.banner-button-text 关于我
+
+#article-container
+  blockquote
+    b 一些收藏
+  .hexo-collect-show
+    - let gamesPageContent = page.content
+    if site.data.games
+      - let result = ""
+      each i in site.data.games
+        - let className = i.class_name ? `<h2 ${i.class_desc?'':'style="margin-bottom:12px"'}>${i.class_name} (${i.link_list.length})</h2>` : ""
+        - let classDesc = i.class_desc ? `<div class="collect-desc">${i.class_desc}</div>` : ""
+        - let listResult = ""
+        each item in i.link_list
+          -
+            listResult += `
+              <div class="hexo-collect-item">
+                <div class="hexo-collect-picture" title="${item.name}">
+                  <a target="_blank" href="${item.link}" rel="external nofollow">
+                    <img src="${item.cover}" data-src="${item.cover}" referrerpolicy="no-referrer">
+                  </a>
+                </div>
+                <div class="hexo-collect-info">
+                  <div class="hexo-collect-title" title="${item.name}">
+                    <a target="_blank" href="${item.link}" rel="external nofollow">${item.name}</a>
+                  </div>
+                  <div class="bber-reply" onclick="rm.rightMenuCommentText('${item.name}')">
+                    <i class="fas fa-message" style="cursor:pointer;float:right;right:10px;bottom:5px;position:absolute;font-weight:900;"></i>
+                  </div>
+                  <div class="hexo-collect-meta">${item.date_grade}</div>
+                  <div class="hexo-collect-comments">${item.comment?item.comment:'暂无评论'}</div>
+                </div>
+              </div>
+            `
+          -
+        - result += `${className}${classDesc} <div id="hexo-collect-item3">${listResult}</div>`
+      - gamesPageContent = gamesPageContent + result
+    != gamesPageContent
+
+  blockquote
+    b 那些年看的视频
+  .collect
+    - let collectPageContent = page.content
+    if site.data.collect
+      - let result = ""
+      each i in site.data.collect
+        - let className = i.class_name ? `<h2 ${i.class_desc?'':'style="margin-bottom:12px"'}>${i.class_name} (${i.link_list.length})</h2>` : ""
+        - let classDesc = i.class_desc ? `<div class="collect-desc">${i.class_desc}</div>` : ""
+        - let listResult = ""
+        each j in i.link_list
+          -
+            listResult += `
+              <div title="${j.name}" referrerPolicy="no-referrer" class="collect_box" style="${j.img?`background-image: url(${j.img})`:'background-color: #333;'}">
+                <div class="collect-div"><a href="${j.link}" rel="external nofollow"></a></div>
+                  <div class="collect_top">
+                    <i class="${j.icon?j.icon:'fa-solid fa-film'}"></i>
+                    <span>${j.tip?j.tip:'电影'}</span>
+                  </div>
+                  <div class="collect_content">
+                    <span>${j.name?j.name:'未知'}</span>
+                    <div>${j.score?toStar(j.score):toStar(0)}</div>
+                  </div>
+              </div>
+            `
+          -
+        - result += `${className}${classDesc} <div class="collect-list">${listResult}</div>`
+      - collectPageContent = collectPageContent + result
+    != collectPageContent

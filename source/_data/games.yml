@@ -1,0 +1,73 @@
+# 电影推荐
+# name：电影名称
+# link：电影链接
+# cover: 封面图，可以从豆瓣页面右键复制图片链接
+# date_grade: 可设置为电影评分与观看日期 ★☆
+# comment: 评论
+- class_name: 游戏分享
+  class_desc: #分类描述
+  link_list:
+    - name: 我的妹妹不可能那么可爱 携带版 附带特典
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EixWt9FmVppIp95ngT32To0BkNFhOITp6KQip4gyPsfn6Q?e=8t8XU0
+      cover: https://pic.imgdb.cn/item/64a912581ddac507ccc6c691.png
+      date_grade: ADV/汉化/PSP模拟器
+    - name: 琉璃樱
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:u:/g/personal/bm158_365_liout_com/EbOjY36KdIZBjXxe3kcyoQYBSOCPMW88uCIoatsJHMmCRw?e=Z36K4T
+      cover: https://pic.imgdb.cn/item/64ad77a71ddac507cc78fbda.webp
+      date_grade: PC/汉化
+      comment: 时处飞鸟时代，因代替神树封印妖怪而成为了“神”的少年——命。为了从妖怪手中拯救世人而成为了除妖舞姬的少女——樱。少年与少女，背负着永生诅咒的“神”与行将就木的舞姬。不期而遇的两人所共度的最后二十九个日夜，在此拉开帷幕。
+    - name: 天籁人偶 冬空焰火/雪华纹样
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EpAI0-0HkZxLuB2X7JGs_PIBn0Yt_lf2TDJYigWF6pFxFQ?e=9AoaLR
+      cover: https://pic.imgdb.cn/item/64a90dc31ddac507ccbdfdc3.png
+      date_grade: PC/ADV/汉化
+      comment: 难道“你”不想和少女们一起度过这无比美妙的时刻嘛？
+    - name: 我的青春恋爱物语也有问题&续合集
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/Ety9cL-yPc1MqdF93jHwUEEBDy4Crnr_-RLZfSNsZeQgkA?e=MLEVX9
+      cover: https://pic.imgdb.cn/item/6499446a1ddac507ccf6b011.png
+      date_grade: PC/汉化
+      comment: 听说快要推出第三部曲了呢~
+    - name: 茸雪 Tiny Snow
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EhlcFBeOxgpEsodCi4Z2Q_IBs-v-eOvMwtLHGjSgK4OP8Q?e=r5YUBf
+      cover: https://pic.imgdb.cn/item/64984f8a1ddac507ccbea74b.jpg
+      date_grade: 国产/PC
+      comment: 橘子班三部曲（炒饭私货三部曲）之一《茸雪》
+    - name: ATRI -My Dear Moments-
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/Er2Gw1SMrmJEs0VtmO4RfRUBRQ5vbvlOvBftMgPY8qhaLg?e=Fa8dvp
+      cover: https://pic.imgdb.cn/item/6493b0ea1ddac507cc365914.jpg
+      date_grade: 汉化/KR
+      comment: 《ATRI -My Dear Moments-》是ANIPLEX.EXE与FrontWing 以及枕社合作推出的ADV。
+    - name: Summer pockets REFLECTION BLUE
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EjG5mEyydbVJsvZEBlqErtABudcjDMoGz2Dcyx8l7Xasig?e=gPbe5k
+      cover: https://pic.imgdb.cn/item/6493d3451ddac507cc68d346.webp
+      date_grade: 汉化/pc/安卓
+      comment: 无论何时，都会记得那夏日的湛蓝……
+    - name: 架向星空之桥
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EiOmmr38yStGsrSHxJJnUr8B8zSy-1WnxnhMqSnOnD113Q?e=GkHtdi
+      cover: https://pic.imgdb.cn/item/64ac22d11ddac507ccaaa498.png
+      date_grade: PC/汉化
+      comment: 空之三部曲第三作，与前两作《望见青空之丘》及《染红的街道》有着相同的世界观，也是三部作的终集。以名为山比古町的乡下小镇舞台的校园恋爱故事。
+    - name: 剑侠风尘恋曲
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EreP-pyvn1NOjqi_0IDz3DABFtSKWxGgEE3r5KkozeMU8Q?e=JggK5C
+      cover: https://pic.imgdb.cn/item/649843831ddac507cca98428.webp
+      date_grade: 国产/PC
+      comment: 一部由国产台湾组制作的一部策略型的武侠作品（遗憾的是制作组已经解散了）
+    - name: 白日梦的构想图
+      link: https://ludhianagroupofcolleges-my.sharepoint.com/:f:/g/personal/bm158_365_liout_com/EqjhePhLbQRHuIbXLWIn4D0BDf-3g5vKRLmmn2Od3rxm7g?e=i7r0Vw
+      cover: http://storage.live.com/items/7244E5F19F8EB8ED!161:/64833fe907ebd.webp?authkey=!AGBDz9Rfavu1WSE
+      date_grade: ADV/PC
+      comment: 剧情丰富 情感 爱情 视觉小说 科幻 2D+
+    - name: 飞鸟会长不肯认输
+      link: https://pan.baidu.com/s/1gvT54_O5J-gA_nYuOeWjLg?pwd=igst
+      cover: https://jsd.onmicrosoft.cn/npm/blogimages/games/f6d362b9aea9_720w.png
+      date_grade: PC硬盘
+      comment: 海豹社于2022年12月23日发售的短篇Galgame，由若叶祥庆负责剧本，濑奈茅冬等负责原画。游戏的原画精美，剧本短小精悍，以恋爱发糖为主
+    - name: 野良与皇女与流浪猫之心
+      link: https://pan.baidu.com/s/1Wn8AgENpFspxi8ke0K4DiA?pwd=pxwd
+      cover: https://jsd.onmicrosoft.cn/npm/blogimages/games/47cb5fa1440w.jpg
+      date_grade: kr、PC硬盘
+      comment: 开发商HARUKAZE发售的一部以欢乐搞笑为基调的美少女游戏，有些毒点
+    - name: 怪物猎人：世界
+      link: https://www.xiaoheihe.cn/games/detail/582010
+      cover: https://cdn.max-c.com/heybox/dailynews/img/94376ca41326836587a137d5999733e5.jpg
+      date_grade: CAPCOM Co., Ltd.
+      comment: 新的生命之地。

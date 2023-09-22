@@ -1,0 +1,429 @@
+/* 藏宝阁 */
+
+[data-theme="dark"] body[data-type="collect"] #web_bg {
+  background: none !important;
+}
+
+.collect-item-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.collect-item-content-item {
+  width: calc(25% - 12px);
+  border-radius: 12px;
+  border: 1px solid #e3e8f7;
+  overflow: hidden;
+  margin: 8px 6px;
+  background: #fff;
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  min-height: 400px;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .collect-item-content-item {
+    width: calc(50% - 12px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collect-item-content-item {
+    width: 100%;
+  }
+}
+
+.collect-item-content-item-info {
+  padding: 8px 16px 16px 16px;
+  margin-top: 12px;
+}
+
+.collect-item-content-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+}
+
+.collect-item-content-item-specification {
+  font-size: 12px;
+  color: #3c3c43cc;
+  line-height: 1;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collect-item-content-item-description {
+  line-height: 20px;
+  color: #3c3c43cc;
+  height: 60px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+
+a.collect-item-content-item-link {
+  font-size: 12px;
+  background: #9999992b;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+a.collect-item-content-item-link:hover {
+  background: #425aef !important;
+  color: #fff;
+}
+
+h2.collect-item-title {
+  line-height: 1;
+}
+
+.collect-item-description {
+  line-height: 1;
+  margin: 4px 0 8px 0;
+  color: #3c3c43cc;
+}
+
+.collect-item-content-item-cover {
+  width: 100%;
+  height: 200px;
+  background: #f1f3f8;
+  display: flex;
+  justify-content: center;
+}
+
+img.collect-item-content-item-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+div#collect {
+  margin-top: 26px;
+}
+
+.collect-item-content-item-toolbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 16px;
+}
+
+a.bber-reply {
+  cursor: pointer;
+}
+
+/* 去除页面白色底框 */
+body[data-type=collect] #page {
+  border: 0;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: 0 0 !important;
+}
+
+/* 藏宝阁样式1 */
+
+.collect h2 {
+  margin-bottom: 0;
+}
+
+.collect .collect-desc {
+  margin-bottom: 10px;
+}
+
+.collect .collect-list {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+
+.collect_box .collect-div a {
+  padding: 0 !important;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: -10px -10px;
+  border-bottom: none !important;
+}
+
+.collect_box .collect-div a {
+  background: none !important;
+}
+
+.collect .collect-list .collect_box {
+  --w: calc(100% / 6 - 15px);
+  width: var(--w);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.collect .collect-list .collect_box::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  transition: 0.5s;
+}
+
+.collect .collect-list .collect_box:hover {
+  transform: translateY(-10px);
+}
+
+.collect .collect-list .collect_box:hover::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.collect .collect-list .collect_box .collect_top {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collect .collect-list .collect_box .collect_content {
+  z-index: 1;
+  margin-top: 86%;
+}
+
+.collect .collect-list .collect_box .collect_content span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] .collect .collect-list .collect_box {
+  color: #ddd !important;
+}
+
+[data-theme='dark'] .collect .collect-list .collect_box:hover {
+  transform: translateY(-10px);
+}
+
+[data-theme='dark'] .collect .collect-list .collect_box:hover::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .collect .collect-list .collect_box::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1100px) {
+  .collect .collect-list {
+    gap: 15px;
+  }
+
+  .collect .collect-list .collect_box {
+    --w: calc(20% - 12px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .collect .collect-list {
+    gap: 16px;
+  }
+
+  .collect .collect-list .collect_box {
+    --w: calc(25% - 12px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collect .collect-list {
+    gap: 15px;
+  }
+
+  .collect .collect-list .collect_box {
+    --w: calc(100% / 3 - 10px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .collect .collect-list {
+    gap: 16px;
+  }
+
+  .collect .collect-list .collect_box {
+    --w: calc(50% - 8px);
+  }
+}
+
+
+/* 藏宝阁样式2 */
+
+.hexo-collect-item {
+  /* border-bottom: none !important; */
+  background: var(--icedream-card-bg);
+  border: var(--style-border);
+  box-shadow: var(--icedream-shadow-border);
+  border-radius: 12px;
+  margin: 8px 0;
+  height: 160px;
+  min-height: 160px !important;
+  width: 49%;
+  overflow: hidden;
+  position: relative;
+  clear: both;
+  max-width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px #ddd solid;
+}
+
+#hexo-collect-item3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hexo-collect-item .hexo-collect-picture a {
+  padding: 0 !important;
+}
+
+.hexo-collect-item .hexo-collect-picture img {
+  margin: 0px !important;
+  height: 100% !important;
+}
+
+.hexo-collect-tabs {
+  display: none;
+}
+
+.hexo-collect-title a {
+  border-bottom: 0px !important;
+}
+
+.hexo-collect-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hexo-collect-title a:hover {
+  color: #f2b94b !important;
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.hexo-collect-pagination {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.hexo-collect-title {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: 2;
+}
+
+.hexo-collect-title a {
+  padding: 0 !important;
+}
+
+.hexo-collect-info {
+  padding-left: 210px !important;
+  margin-right: 0.5rem;
+}
+
+.hexo-collect-meta {
+  font-size: 0.7rem !important;
+  color: var(--icedream-secondtext);
+  margin-top: 0.3rem;
+  line-height: 1.05;
+}
+
+.hexo-collect-comments {
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  font-size: 0.8rem !important;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.hexo-collect-picture {
+  height: 100%;
+  top: 0 !important;
+  padding: 10px 0 10px 10px;
+}
+
+.hexo-collect-picture a img {
+  border-radius: 8px !important;
+  height: auto;
+  width: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+/* @media screen and (min-width: 1300px) {
+  .hexo-collect-item {
+      width: 32%;
+  }
+} */
+
+
+@media screen and (max-width: 768px) {
+  .hexo-collect-item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hexo-collect-picture {
+  position: absolute;
+  left: 0;
+  /* top: 10px; */
+  width: 200px;
+}
+
+/* .hexo-collect-info {
+        padding-left: 120px;
+    } */
+
+.hexo-collect-meta {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.hexo-collect-comments {
+  font-size: 12px;
+}

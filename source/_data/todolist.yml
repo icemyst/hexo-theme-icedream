@@ -1,0 +1,20 @@
+- class_name: 清单
+  seat: left
+  todo_list:
+    - content: 冰梦の博客
+      link: https://hcer.top
+      completed: true
+    - content: 冰梦の博客
+      link: https://hcer.top
+      completed: false
+
+
+- class_name: 清单
+  seat: right
+  todo_list:
+    - content: 冰梦の博客
+      link: https://hcer.top
+      completed: true
+    - content: 冰梦の博客
+      link: https://hcer.top
+      completed: false

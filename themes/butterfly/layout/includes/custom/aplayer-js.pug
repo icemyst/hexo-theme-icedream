@@ -1,0 +1,34 @@
+- let truncationTitle = config.title
+script(data-pjax).
+  var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  var pageHeaderEl = document.getElementById("page-header");
+  var navMusicEl = document.getElementById("nav-music");
+  var consoleEl = document.getElementById("console");
+  // 已随机的歌曲
+  var selectRandomSong = [];
+  // 音乐默认声音大小
+  var musicVolume = 0.8;
+  // 是否切换了周杰伦音乐列表
+  var changeMusicListFlag = false;
+  // 当前默认播放列表
+  var defaultPlayMusicList = [];
+
+  document.getElementById("page-name").innerText = document.title.split(" | #{truncationTitle}")[0];
+  btf.initIndexEssay();
+  btf.changeTimeInEssay();
+  btf.removeBodyPaceClass();
+  btf.qrcodeCreate();
+  btf.changeTimeInAlbumDetail();
+  btf.reflashEssayWaterFall();
+  btf.sayhi();
+  btf.stopImgRightDrag();
+  btf.addNavBackgroundInit();
+  btf.setValueToBodyType();
+  btf.catalogActive();
+  btf.tagsPageActive();
+  btf.categoriesBarActive();
+  btf.topCategoriesBarScroll();
+  btf.switchRightClickMenuHotReview();
+  btf.getCustomPlayList();
+  btf.addEventListenerConsoleMusicList(false);
+  setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)

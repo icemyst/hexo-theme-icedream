@@ -1,0 +1,76 @@
+
+#footer-wrap .fas.fa-heartbeat {
+  transition: 0.3s;
+  animation: heartbeat-bounce 2s ease-in-out infinite;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+@keyframes heartbeat-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  10%,
+  30% {
+    transform: scale(0.9);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1);
+  }
+  50%,
+  70% {
+    transform: scale(1.1);
+  }
+}
+
+/* 页脚蝴蝶振翅动画 */
+.copyright svg{
+  animation:butterfly 1s linear infinite alternate;
+}
+@keyframes butterfly {
+  from {
+    transform:rotateY(70deg);
+  }
+  to {
+    transform:rotateY(0deg);
+  }
+}
+
+.copyright span {
+  vertical-align: super;
+}
+
+
+#fps{
+  position: fixed;
+  right:10px;
+  bottom:4px;
+  z-index: 1919810;
+  color: var(--icedream-white);
+}
+
+[data-theme="light"] #fps{
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: none ;
+  padding: 4px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+[data-theme="dark"] #fps{
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: none ;
+
+  padding: 4px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+

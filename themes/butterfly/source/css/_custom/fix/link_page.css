@@ -1,0 +1,22 @@
+body[data-type="link"] main #page {
+  border: 0;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+body[data-type="link"] #web_bg {
+  background: none !important;
+}
+
+[data-theme="dark"] body[data-type="link"] #web_bg {
+  background: none !important;
+}
+
+[data-theme="dark"] body[data-type="link"] #page {
+  background: transparent;
+}
+
+.flink .btf-flink-list {
+  padding: 0;
+}

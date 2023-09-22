@@ -1,0 +1,352 @@
+if site.data.about
+  - let aboutData = site.data.about
+  each item in aboutData
+    - let img_bg = item.img_bg
+    - let subtitle = item.subtitle || config.subtitle
+    - let aboutName = item.name || config.author
+    - let avatarImg = item.avatarImg || theme.avatar.img
+
+    #about-page
+      .author-box
+        .author-tag-left
+          - let {tag_left,tag_right} = item.author_box
+          each i in tag_left
+            span.author-tag= `${i}`
+        .author-img
+          .image-dot
+          img.no-lightbox(title=item.name,src='https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5', alt=item.name)
+        .author-tag-right
+          each i in tag_right
+            span.author-tag= `${i}`
+      - let {title_h2} = item.author_name
+      h1.aboutName= subtitle
+      h2.title_h2= title_h2
+      #author_text.author_text
+        - let { message } = item.author_text
+        each i in message
+          p.author_p(style='text-align:center;')= `${i}`
+
+      .author-content
+        .author-content-item-group.column.mapAndInfo
+          - let mapBackground = item.map.background
+          - let mapBackgroundDark = item.map.backgroundDark
+          style.
+            .author-content-item.map {
+              background-image: url(#{mapBackground});
+              width: 100%;
+              padding: inherit;
+            }
+            [data-theme='dark'] .author-content-item.map {
+              background-image: url(#{mapBackgroundDark});
+              width: 100%;
+              padding: inherit;
+            }
+
+          .author-content-item.map.single
+            #welcome-info
+            - let mapTitle = item.map.title
+            - let mapStrengthenTitle = item.map.StrengthenTitle
+            span.map-title=mapTitle
+              b=mapStrengthenTitle
+          .author-content-item.selfInfo.single
+            - let { selfInfoTips1, selfInfoContentYear, selfInfoTips2, selfInfoContent2, selfInfoTips3, selfInfoContent3 } = item.selfInfo
+            div
+              span.selfInfo-title=selfInfoTips1
+              |
+              span.selfInfo-content#selfInfo-content-year(style='color:#43a6c6')=selfInfoContentYear
+            div
+              span.selfInfo-title=selfInfoTips2
+              |
+              span.selfInfo-content(style='color:#c69043')=selfInfoContent2
+            div
+              span.selfInfo-title=selfInfoTips3
+              |
+              span.selfInfo-content(style='color:#b04fe6')=selfInfoContent3
+
+        if theme.LA.enable
+          .about-statistic.author-content-item
+            canvas#canvas
+            .card-content
+              .author-content-item-tips 数据
+              span.author-content-item-title 访问统计
+              #statisticc
+              .post-tips
+                | 统计信息来自
+                a(href='https://invite.51.la/1NzKqTeb?target=V6', target='_blank', rel='noopener nofollow') 51la网站统计
+              .banner-button-group
+                - let link = item.statistic.link
+                - let text = item.statistic.text
+                a.banner-button(onclick=`pjax.loadUrl("${link}")`)
+                  i.fas.fa-arrow-circle-right
+                  |
+                  span.banner-button-text=text
+
+      .author-content
+        .author-content-item.myphoto
+          - let {photo_url} = item.myphoto
+          img.author-content-img.no-lightbox(alt='', src=url_for(photo_url))
+        .author-content-item.personalities(style='padding: inherit;')
+          canvas#My_canvas.canvas(style='width:100%; height:270px;')
+          .banner-wrap.scenes-ready
+            #stage
+              .space
+                .mountains
+                .mountain.mountain-1
+                .mountain.mountain-2
+                .mountain.mountain-3
+              .bear
+
+        //- .author-content-item.personalities
+          - let {author_name, personality_type, photo_url, personality_img, name_url} = item.personalities
+          .author-content-item-tips 性格
+          span.author-content-item-title= author_name
+          .title2(style='color:#ac899c')= personality_type
+          .post-tips
+            | 在
+            a(href='https://www.16personalities.com/', target='_blank', rel='noopener nofollow') 16personalities
+            |  了解更多关于
+            a(target='_blank', rel='noopener external nofollow', href= name_url)= author_name
+          .image
+            img.no-lightbox(src=url_for(personality_img), alt='人格')
+
+      .author-content
+        - let {game_tips, game_title, game_uid, game_bg} = item.game
+        .author-content-item.game-yuanshen(style=`background: url(${game_bg}) top / cover no-repeat;`)
+          .card-content
+            .author-content-item-tips=game_tips
+            span.author-content-item-title=game_title
+            .content-bottom
+              .icon-group
+                .loading-bar(role='presentation', aria-hidden='true' style=`${game_title != "原神" ? "display: none": ""}`)
+              .tips.game-yuanshen-uid=game_uid
+        .author-content-item.comic-content
+          .card-content
+            - let {comic_tips, comic_title, comic_list} = item.comic
+            .author-content-item-tips=comic_tips
+            .author-content-item-title=comic_title
+            .comic-box
+              if comic_list
+                each i in comic_list
+                  a.comic-item(href=i.href, target="_blank", title=i.name)
+                    .comic-item-cover
+                      img(src=i.cover, alt=i.name)
+
+      - let rawData = item.reward_list
+      if rawData
+        - let sortedByDate = rawData.slice().sort((a, b) => new Date(b.datatime) - new Date(a.datatime));
+        .author-content
+          .author-content-item.single.reward#about-reward
+            .author-content-item-tips 致谢
+            span.author-content-item-title 赞赏名单
+            .author-content-item-description 感谢因为有你们，让我更加有创作的动力。
+              .reward-list-all
+                - let reward_list_amount = item.reward_list.sort((a,b)=>b.amount -  a.amount)
+                each item, index in reward_list_amount
+                  .reward-list-item
+                    .reward-list-item-name=item.name
+                    .reward-list-bottom-group
+                      if item.amount >= 50
+                        .reward-list-item-money(style='background:var(--icedream-yellow)')=`¥${item.amount}`
+                      else
+                        .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
+                      .datatime.reward-list-item-time(datatime=item.datatime)=new Date(item.datatime).toISOString().slice(0, -14)
+              .reward-list-updateDate
+                | 最新更新时间：
+                time.datatime.reward-list-updateDate-time(datatime=sortedByDate[0].datatime)=new Date(sortedByDate[0].datatime).toISOString().slice(0, -14)
+            .about-reward
+              #con
+              #TA-con(onclick="btf.rewardShowConsole()")
+                #text-con
+                  #linght
+                  #TA 为TA充电
+              #tube-con
+                svg(viewBox='0 0 1028 385', fill='none', xmlns='http://www.w3.org/2000/svg')
+                  path(d='M1 77H234.226L307.006 24H790', stroke='#e5e9ef', stroke-width='20')
+                  path(d='M0 140H233.035L329.72 71H1028', stroke='#e5e9ef', stroke-width='20')
+                  path(d='M1 255H234.226L307.006 307H790', stroke='#e5e9ef', stroke-width='20')
+                  path(d='M0 305H233.035L329.72 375H1028', stroke='#e5e9ef', stroke-width='20')
+                  rect(y='186', width='236', height='24', fill='#e5e9ef')
+                  ellipse(cx='790', cy='25.5', rx='25', ry='25.5', fill='#e5e9ef')
+                  circle(r='14', transform='matrix(1 0 0 -1 790 25)', fill='white')
+                  ellipse(cx='790', cy='307.5', rx='25', ry='25.5', fill='#e5e9ef')
+                  circle(r='14', transform='matrix(1 0 0 -1 790 308)', fill='white')
+                #mask
+                  svg(viewBox='0 0 1028 385', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M1 77H234.226L307.006 24H790', stroke='#f25d8e', stroke-width='20')
+                    path(d='M0 140H233.035L329.72 71H1028', stroke='#f25d8e', stroke-width='20')
+                    path(d='M1 255H234.226L307.006 307H790', stroke='#f25d8e', stroke-width='20')
+                    path(d='M0 305H233.035L329.72 375H1028', stroke='#f25d8e', stroke-width='20')
+                    rect(y='186', width='236', height='24', fill='#f25d8e')
+                    ellipse(cx='790', cy='25.5', rx='25', ry='25.5', fill='#f25d8e')
+                    circle(r='14', transform='matrix(1 0 0 -1 790 25)', fill='white')
+                    ellipse(cx='790', cy='307.5', rx='25', ry='25.5', fill='#f25d8e')
+                    circle(r='14', transform='matrix(1 0 0 -1 790 308)', fill='white')
+                #orange-mask
+                  svg(viewBox='0 0 1028 385', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M1 77H234.226L307.006 24H790', stroke='#ffd52b', stroke-width='20')
+                    path(d='M0 140H233.035L329.72 71H1028', stroke='#ffd52b', stroke-width='20')
+                    path(d='M1 255H234.226L307.006 307H790', stroke='#ffd52b', stroke-width='20')
+                    path(d='M0 305H233.035L329.72 375H1028', stroke='#ffd52b', stroke-width='20')
+                    rect(y='186', width='236', height='24', fill='#ffd52b')
+                    ellipse(cx='790', cy='25.5', rx='25', ry='25.5', fill='#ffd52b')
+                    circle(r='14', transform='matrix(1 0 0 -1 790 25)', fill='white')
+                    ellipse(cx='790', cy='307.5', rx='25', ry='25.5', fill='#ffd52b')
+                    circle(r='14', transform='matrix(1 0 0 -1 790 308)', fill='white')
+                p#people
+                  | 共
+                  b=item.reward_list.length
+                  | 人
+
+    script(src=url_for(theme.asset.countup_js))
+    script(src=url_for(theme.asset.gsap_js))
+    - const ck = theme.LA.ck
+    script(defer).
+      (() => {
+        fetch("https://v6-widget.51.la/v6/#{ck}/quote.js")
+          .then(res => res.text())
+          .then(data => {
+            let title = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+            let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+
+            num = num.map(el => {
+              let val = el.replace(/(<\/span><span>)/g, "");
+              let str = val.replace(/(<\/span><\/p>)/g, "");
+              return str;
+            });
+
+            let statisticEl = document.getElementById("statisticc");
+
+            // 自定义不显示哪个或者显示哪个，如下为不显示 最近活跃访客 和 总访问量
+            let statistic = [];
+            for (let i = 0; i < num.length; i++) {
+              if (!statisticEl) return;
+              if (i == 0) continue;
+              statisticEl.innerHTML +=
+                "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
+              queueMicrotask(() => {
+                statistic.push(
+                  new CountUp(title[i], 0, num[i], 0, 2, {
+                    useEasing: true,
+                    useGrouping: true,
+                    separator: ",",
+                    decimal: ".",
+                    prefix: "",
+                    suffix: "",
+                  })
+                );
+              });
+            }
+
+            let statisticElement = document.querySelector(".about-statistic.author-content-item");
+            function statisticUP() {
+              if (!statisticElement) return;
+
+              const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    for (let i = 0; i < num.length; i++) {
+                      if (i == 0) continue;
+                      queueMicrotask(() => {
+                        statistic[i - 1].start();
+                      });
+                    }
+                    observer.disconnect(); // 停止观察元素，因为不再需要触发此回调
+                  }
+                });
+              };
+
+              const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0
+              };
+              const observer = new IntersectionObserver(callback, options);
+              observer.observe(statisticElement);
+            }
+
+            const selfInfoContentYear = new CountUp("selfInfo-content-year", 0, #{selfInfoContentYear}, 0, 2, {
+              useEasing: true,
+              useGrouping: false,
+              separator: ",",
+              decimal: ".",
+              prefix: "",
+              suffix: "",
+            });
+
+            let selfInfoContentYearElement = document.querySelector(".author-content-item.selfInfo.single");
+            function selfInfoContentYearUp() {
+              if (!selfInfoContentYearElement) return;
+
+              const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    selfInfoContentYear.start();
+                    observer.disconnect(); // 停止观察元素，因为不再需要触发此回调
+                  }
+                });
+              };
+
+              const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0
+              };
+              const observer = new IntersectionObserver(callback, options);
+              observer.observe(selfInfoContentYearElement);
+            }
+            selfInfoContentYearUp();
+            statisticUP()
+          });
+      })();
+
+
+    script(defer src="/js/custom/Seffects.js")
+    script(defer src="/js/custom/sayonara.js")
+    script(defer).
+      (function() {
+      	const script = document.currentScript,
+      		fontSize = script.getAttribute("size") || 16,
+      		fontName = script.getAttribute("font") || "monospace";
+      	const canvas = document.getElementById("canvas");
+      		context = canvas.getContext("2d");
+      	//- document.body.appendChild(canvas);
+      	canvas.style.cssText = "position: absolute;top: 0; left: 0;height: 100%; background-color: #111; z-index: 1;";
+      	let W = window.innerWidth,
+      		H = window.innerHeight;
+      	canvas.width = W;
+      	canvas.height = H;
+      	let colunms = Math.floor(W / fontSize),
+      		drops = [],
+      		str = "QWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()1234567890qwertyuiopasdfghjklzxcvbnm";
+      	for (let i = 0; i < colunms; i++) {
+      		drops.push(Math.ceil(canvas.height / fontSize) + 1);
+      	}
+      	setInterval(function() {
+      		context.fillStyle = "rgba(0,0,0,0.05)";
+      		context.fillRect(0, 0, W, H);
+      		context.font = `700 ${fontSize}px ${fontName}`;
+      		context.fillStyle = "#00cc33";
+      		for (let i = 0; i < colunms; i++) {
+      			const index = Math.floor(Math.random() * str.length),
+      				x = i * fontSize,
+      				y = drops[i] * fontSize;
+      			context.fillText(str[index], x, y);
+      			if (y >= canvas.height && Math.random() > 0.99) {
+      				drops[i] = 0;
+      			}
+      			drops[i]++;
+      		}
+      	}, 120);
+      
+      	window.addEventListener("resize", function() {
+      		W = window.innerWidth;
+      		H = window.innerHeight;
+      		canvas.width = W;
+      		canvas.height = H;
+      		colunms = Math.floor(W / fontSize);
+      		drops = [];
+      		for (let i = 0; i < colunms; i++) {
+      			drops.push(Math.ceil(canvas.height / fontSize) + 1);
+      		}
+      	});
+      })();

@@ -1,0 +1,57 @@
+- class_name: 📺 动画
+  class_desc: #分类描述
+  link_list:
+    - name: 刀剑神域 ソードアート・オンライン
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2169290186.webp
+      link: https://movie.douban.com/subject/6869376/
+      score: 5
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 斩·赤红之瞳 アカメが斬る!
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2260245867.webp
+      link: https://movie.douban.com/subject/25815602/
+      score: 4
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 游戏人生 ノーゲーム・ノーライフ
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2164436512.webp
+      link: https://movie.douban.com/subject/24883272/
+      score: 5
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 天使的心跳 Angel Beats!
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1960831284.webp
+      link: https://movie.douban.com/subject/4202090/
+      score: 5
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 凉宫春日的忧郁 涼宮ハルヒの憂鬱
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2504196338.webp
+      link: https://movie.douban.com/subject/1810517/
+      score: 4
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 反叛的鲁路修 コードギアス 反逆のルルーシュ
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2517464011.webp
+      link: https://movie.douban.com/subject/2043155/
+      score: 5
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 魔法禁书目录 とある魔術の禁書目録
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2190191230.webp
+      link: https://movie.douban.com/subject/3251306/
+      score: 4
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 灼眼的夏娜 灼眼のシャナ
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2231215259.webp
+      link: https://movie.douban.com/subject/2017626/
+      score: 3
+      icon: fa-solid fa-film
+      tip: 动画
+    - name: 物语系列 第二季 〈物語〉シリーズ セカンドシーズン
+      img: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2158900536.webp
+      link: https://movie.douban.com/subject/20495792/
+      score: 5
+      icon: fa-solid fa-film
+      tip: 动画

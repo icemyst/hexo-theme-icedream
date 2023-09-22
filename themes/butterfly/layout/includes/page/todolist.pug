@@ -1,0 +1,41 @@
+#todolist-box
+    .page-top-card(style='background-image: url(https://pic.imgdb.cn/item/64fc80bd661c6c8e5403c5d9.webp);')
+        .content-item-tips 待办
+        span.content-item-title 记录清单
+        .content-bottom
+            .tips 想要记录的事还有很多，想要做的事源源不断
+    #todolist-main
+        #todolist-left
+            each i in site.data.todolist
+                if i.seat == 'left'
+                    .todolist-item
+                        h3.todolist-title=i.class_name
+                        ul.todolist-ul
+                            each item in i.todo_list
+                                li.todolist-li
+                                    if item.completed
+                                        i.fa-regular.fa-circle-check
+                                    else
+                                        i.fa-regular.fa-circle
+                                    if item.link
+                                        a(href=item.link)
+                                            span=item.content
+                                    else
+                                        span=item.content
+        #todolist-right
+            each i in site.data.todolist
+                if i.seat == 'right'
+                    .todolist-item
+                        h3.todolist-title=i.class_name
+                        ul.todolist-ul
+                            each item in i.todo_list
+                                li.todolist-li
+                                    if item.completed
+                                        i.fa-regular.fa-circle-check
+                                    else 
+                                        i.fa-regular.fa-circle
+                                    if item.link
+                                        a(href=item.link)
+                                            span=item.content
+                                    else
+                                        span=item.content

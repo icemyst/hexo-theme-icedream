@@ -1,0 +1,58 @@
+- class_name: 收录一些二次元图
+  path_name: /album/dimensional/
+  type: 2
+  top_background: https://pic2.zhimg.com/80/v2-69a7e58a11a71899e8b8c165e736e085_1440w.webp
+  description: 本人只是搬运工，图片均来自互联网，如有侵权请联系删除，不会以此获取任何利益!
+  cover: https://pic2.zhimg.com/80/v2-341e4848cd2dc1b61b1f9ebf208a1425_1440w.webp
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  album_list:
+    - date: 2022/10/26 01:00:00
+      content: 次元阁
+      address: 二次元
+      from: 二次元图片收录
+      image:
+        - http://img.xjh.me/img/57330326_p0.jpg
+    - date: 2022-10-25
+      content: 次元阁
+      address: 二次元
+      from: 二次元图片收录
+      image:
+        - http://img.xjh.me/img/yaya.jpg
+        - https://picx.zhimg.com/80/v2-e8c985209e0a421d3fe87a6d3d62cbfa_1440w.webp
+  
+
+- class_name: 风景图
+  path_name: /album/wordScenery/
+  type: 2
+  top_background: https://pic3.zhimg.com/80/v2-f52d43219bb57f86008e045b9c0a9716_1440w.webp
+  description: 放几张好看的风景图，记录世界的美好。
+  cover: https://picx.zhimg.com/80/v2-5ae0785ad1b024d9a12263c930fded69_1440w.webp
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  album_list:
+    - date: 2023-05-24
+      content: 风景图收录
+      image:
+        - https://fastly.picsum.photos/id/907/1600/900.jpg?hmac=aOrGMomTk4-NTNof4EE97L_zpYFqPTCzxh0ey57Telo
+        - https://pic2.zhimg.com/80/v2-a231d1092eebd24404b8b599b4a46c89_1440w.webp
+
+
+- class_name: 一些无聊的记录
+  path_name: /album/dailyPhoto/
+  type: 1
+  top_background: https://images.wallpaperscraft.com/image/single/girl_sea_summer_941681_2560x1080.jpg
+  description: 这里记录一些有趣的事情
+  cover: https://api.dujin.org/bing/1920.php
+  album_list:
+    - date: 2023-01-12
+      content: 东方Project随机图片API
+      image:
+        - https://img.paulzzh.com/touhou/random
+      link: https://img.paulzzh.com/

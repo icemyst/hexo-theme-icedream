@@ -1,0 +1,70 @@
+
+- class_name: 关于
+  author_box:
+    tag_left:
+      - 🤖️ 数码科技爱好者
+      - 🔍 分享与热心帮助
+      - 🏠 智能家居小能手
+      - 🔨 设计开发一条龙
+    tag_right:
+      - 专修各种小问题 🤝
+      - 脚踏实地行动派 🏃
+      - 个人业余发动机 🧱
+      - 人不狠话也不多 💢
+  author_name:
+    title_h2: 与自己促膝长谈，与孤独握手言欢。
+  author_text:
+    message:
+      - 不久前还只是一个失业农民工.
+      - 现在还只是一只喜欢动漫和文学的上班族.
+      - 不久以后将是又一个人生迷茫的旅行者.
+  statistic:
+    link: /archives/
+    text: 文章隧道
+  map:
+    title: 欢迎来到
+    StrengthenTitle: 冰梦の博客
+    background: https://cdn.cdnjson.com/tvax3.sinaimg.cn//large/0072Vf1pgy1foxk6ybqjfj31hc0u047b.jpg
+    backgroundDark: https://cdn.cdnjson.com/tvax3.sinaimg.cn//large/0072Vf1pgy1foxki5aet4j31kw0w0kib.jpg
+
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2000
+    selfInfoTips2: 贵州电子信息职业技术学院
+    selfInfoContent2: 软件工程
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 上班族
+  myphoto:
+    photo_url: https://t.lizi.moe/fj
+  game:
+    game_tips: 爱好游戏
+    game_title: 原神
+    game_uid: "UID: 127776458"
+    game_bg: https://pic2.imgdb.cn/item/645f98580d2dde57772fb44e.webp
+  comic:
+    comic_tips: 爱好番剧
+    comic_title: 追番
+    comic_list:
+      - name: 星之梦
+        href: https://www.bilibili.com/bangumi/media/md5045/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic2.imgdb.cn/item/6464f10a0d2dde57770ecbf0.webp
+      - name: 伍六七之暗影宿命
+        href: https://www.bilibili.com/bangumi/media/md28412536/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic2.imgdb.cn/item/6464f0970d2dde57770dc445.webp
+      - name: 路人女主的养成方法
+        href: https://www.bilibili.com/bangumi/media/md1512/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic2.imgdb.cn/item/6464efac0d2dde57770bcb96.webp
+      - name: 希灵纪元
+        href: https://www.bilibili.com/bangumi/media/md28235357/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic2.imgdb.cn/item/6464ef590d2dde57770b20ba.webp
+      - name: 刀剑神域
+        href: https://www.bilibili.com/bangumi/media/md24755609/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://pic2.imgdb.cn/item/6464ee570d2dde57770913af.webp
+
+  reward_list:
+    - name: 冰梦
+      amount: 1
+      datatime: 2023-05-19
+    - name: 千*p
+      amount: 20
+      datatime: 2023-06-22

@@ -1,0 +1,46 @@
+- class_name: 框架
+  flink_style: flexcard
+  link_list:
+    - name: Hexo
+      hundredSuffix: "!w120"
+      link: https://hexo.io/zh-tw
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网站框架
+      siteshot: 
+
+
+
+- class_name: 博客推荐
+  flink_style: telescopic
+  link_list:
+    - name: 冰刻无痕
+      hundredSuffix: "!w120"
+      link: https://hcer.top
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5
+      descr: 到不了的都叫远方，回不去的都叫故乡。
+      color: vip
+      tag: 推荐
+      siteshot:
+    - name: 冰刻无痕
+      hundredSuffix: "!w120"
+      link: https://hcer.top
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5
+      descr: 到不了的都叫远方，回不去的都叫故乡。
+      siteshot:
+
+- class_name: 友链聚集地
+  class_desc: 那些人，那些事。
+  flink_style: anzhiyu
+  link_list:
+    - name: 冰刻无痕
+      hundredSuffix: "!w120"
+      link: https://hcer.top
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5
+      descr: 到不了的都叫远方，回不去的都叫故乡。
+      color: vip
+      tag: 荐 
+    - name: 冰刻无痕
+      offline: false
+      link: https://hcer.top
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5
+      descr: 到不了的都叫远方，回不去的都叫故乡。
